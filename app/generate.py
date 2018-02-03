@@ -47,23 +47,25 @@ def format_results(results: List[str]) -> str:
     return formatted
 
 
-def main(friends: List[str], num_boxes: int) -> None:
+def gen_results(friends: List[str], num_boxes: int) -> List[List[int]]:
     num_friends = len(friends)
     results = np.random.choice(
         friends,
         num_boxes,
         p=([1 / num_friends] * num_friends))
 
-    formatted_results = format_results(results)
+    formatted = format_results(results)
+    reshaped_results = np.reshape(results, (-1, 10))
 
     logger.info(
 	'Final Results: \n'
-	'{}'.format(formatted_results))
+	'{}'.format(formatted))
+    return reshaped_results
 
 
 if __name__ == "__main__":
     options = parse_args()
     friends = [name.strip() for name in options.friends.split(',')]
     logger.info('List of friends passed: {}'.format(friends))
-    main(friends, options.num_boxes)
+    gen_results(friends, options.num_boxes)
 
