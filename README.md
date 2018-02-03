@@ -1,7 +1,7 @@
 # superbowl_boxes
 Randomly generates superbowl boxes for you and your friends.
 
-# CLI Test
+## CLI Test
 (superbowl_boxes) vchiapaikeo-mbp:superbowl_boxes vchiapaikeo$ python3 generate_boxes.py --friends="Victor, Garrett, Ryan, Nina, Carmen, Jon"
 
 2018-02-03 16:23:49,871 - __main__ - INFO - List of friends passed: ['Victor', 'Garrett', 'Ryan', 'Nina', 'Carmen', 'Jon']
@@ -17,7 +17,7 @@ Randomly generates superbowl boxes for you and your friends.
 81: Nina 82: Carmen 83: Victor 84: Carmen 85: Victor 86: Garrett 87: Nina 88: Carmen 89: Garrett 90: Ryan 
 91: Victor 92: Nina 93: Jon 94: Garrett 95: Jon 96: Victor 97: Victor 98: Carmen 99: Carmen 100: Carmen 
 
-# Flask Test
+## Flask Test
 (superbowl_boxes) vchiapaikeo-mbp:superbowl_boxes vchiapaikeo$ flask run
  * Serving Flask app "server"
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
@@ -35,7 +35,7 @@ Randomly generates superbowl boxes for you and your friends.
 
 127.0.0.1 - - [03/Feb/2018 17:00:17] "GET / HTTP/1.1" 200 -
 
-# Py3 Test
+## Py3 Test
 (superbowl_boxes) vchiapaikeo-mbp:superbowl_boxes vchiapaikeo$ python3 app.py 
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  2018-02-03 18:03:58,753 - server.generate - INFO - Final Results: 
