@@ -3,6 +3,7 @@ import logging
 import numpy as np
 import sys
 
+from random import randint
 from typing import List
 
 logger = logging.getLogger(__name__)
@@ -47,13 +48,30 @@ def format_results(results: List[str]) -> str:
     return formatted
 
 
-def gen_results(friends: List[str], num_boxes: int) -> List[List[int]]:
-    num_friends = len(friends)
-    results = np.random.choice(
-        friends,
-        num_boxes,
-        p=([1 / num_friends] * num_friends))
+def get_random_names(friends: List[str], num_boxes: int) -> List[str]:
+    # Did this earlier but that is wrong
+    # results = np.random.choice(
+    #     friends,
+    #     num_boxes,
+    #     p=([1 / num_friends] * num_friends))
 
+    num_friends = len(friends)
+    names_to_randomize = []
+    for i in range(0, num_boxes):
+        idx = i % num_friends
+        names_to_randomize.append(friends[idx])
+
+    random_names = []
+    for i in range(0, num_boxes):
+        random_idx = randint(0, num_boxes - i)
+        assignment = names_to_randomize.pop(random_idx - 1)
+        random_names.append(assignment)
+
+    return random_names
+
+
+def gen_results(friends: List[str], num_boxes: int) -> List[List[int]]:
+    results = get_random_names(friends, num_boxes)
     formatted = format_results(results)
     reshaped_results = np.reshape(results, (-1, 10))
 
