@@ -3,6 +3,7 @@ Randomly generates superbowl boxes for you and your friends.
 
 # CLI Test
 (superbowl_boxes) vchiapaikeo-mbp:superbowl_boxes vchiapaikeo$ python3 generate_boxes.py --friends="Victor, Garrett, Ryan, Nina, Carmen, Jon"
+
 2018-02-03 16:23:49,871 - __main__ - INFO - List of friends passed: ['Victor', 'Garrett', 'Ryan', 'Nina', 'Carmen', 'Jon']
 2018-02-03 16:23:49,871 - __main__ - INFO - Final Results: 
 1: Carmen 2: Nina 3: Ryan 4: Ryan 5: Nina 6: Victor 7: Garrett 8: Garrett 9: Garrett 10: Ryan 
