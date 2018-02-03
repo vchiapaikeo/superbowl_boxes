@@ -1,11 +1,12 @@
 from server import app, generate
 from flask import jsonify
+from flask_cors import CORS
 
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 @app.route('/')
 @app.route('/api')
-def api(names=None: List[str], num_boxes=100: int) -> str:
+def api() -> str:
     data = generate.gen_results([
         'Victor',
         'Ephraim',
