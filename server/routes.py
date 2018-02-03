@@ -1,4 +1,4 @@
-from app import app, generate
+from server import app, generate
 from flask import jsonify
 
 @app.route('/')
