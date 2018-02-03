@@ -3,7 +3,7 @@ import logging
 import numpy as np
 import sys
 
-from random import randint
+from random import randint, shuffle
 from typing import List
 
 logger = logging.getLogger(__name__)
@@ -55,6 +55,7 @@ def get_random_names(friends: List[str], num_boxes: int) -> List[str]:
     #     num_boxes,
     #     p=([1 / num_friends] * num_friends))
 
+    shuffle(friends)
     num_friends = len(friends)
     names_to_randomize = []
     for i in range(0, num_boxes):
