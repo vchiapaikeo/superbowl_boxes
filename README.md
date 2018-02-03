@@ -17,7 +17,7 @@ Randomly generates superbowl boxes for you and your friends.
 81: Nina 82: Carmen 83: Victor 84: Carmen 85: Victor 86: Garrett 87: Nina 88: Carmen 89: Garrett 90: Ryan 
 91: Victor 92: Nina 93: Jon 94: Garrett 95: Jon 96: Victor 97: Victor 98: Carmen 99: Carmen 100: Carmen 
 
-# Flask test
+# Flask Test
 (superbowl_boxes) vchiapaikeo-mbp:superbowl_boxes vchiapaikeo$ flask run
  * Serving Flask app "server"
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
@@ -34,3 +34,20 @@ Randomly generates superbowl boxes for you and your friends.
 91: Carmen 92: Carmen 93: Ryan 94: Ryan 95: Ryan 96: Jay Ly 97: Jay K 98: Nina 99: Jay K 100: Christian 
 
 127.0.0.1 - - [03/Feb/2018 17:00:17] "GET / HTTP/1.1" 200 -
+
+# Py3 Test
+(superbowl_boxes) vchiapaikeo-mbp:superbowl_boxes vchiapaikeo$ python3 app.py 
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ 2018-02-03 18:03:58,753 - server.generate - INFO - Final Results: 
+ 1: Ephraim 2: Jon 3: Paulo 4: Garrett 5: Ephraim 6: Jay Ly 7: Jay Ly 8: Nina 9: Victor 10: Jay K 
+ 11: Ryan 12: Ephraim 13: Jon 14: Victor 15: Jay Ly 16: Jay K 17: Paulo 18: Garrett 19: Ephraim 20: Victor 
+ 21: Nina 22: Carmen 23: Victor 24: Ryan 25: Paulo 26: Garrett 27: Garrett 28: Jay Ly 29: Garrett 30: Jon 
+ 31: Christian 32: Jay K 33: Carmen 34: Jay Ly 35: Jay Ly 36: Garrett 37: Christian 38: Carmen 39: Jay K 40: Carmen 
+ 41: Nina 42: Christian 43: Christian 44: Garrett 45: Carmen 46: Ryan 47: Carmen 48: Victor 49: Christian 50: Christian 
+ 51: Ryan 52: Victor 53: Jon 54: Nina 55: Ryan 56: Ryan 57: Paulo 58: Jon 59: Jay K 60: Ryan 
+ 61: Paulo 62: Christian 63: Jay K 64: Jay K 65: Ephraim 66: Jay K 67: Nina 68: Jon 69: Christian 70: Paulo 
+ 71: Ephraim 72: Jay Ly 73: Jon 74: Nina 75: Nina 76: Victor 77: Garrett 78: Paulo 79: Victor 80: Ephraim 
+ 81: Paulo 82: Victor 83: Christian 84: Ephraim 85: Nina 86: Paulo 87: Carmen 88: Jay Ly 89: Victor 90: Garrett 
+ 91: Jay K 92: Jon 93: Ephraim 94: Jon 95: Nina 96: Jay Ly 97: Ryan 98: Carmen 99: Carmen 100: Ryan 
+
+ 127.0.0.1 - - [03/Feb/2018 18:03:58] "GET / HTTP/1.1" 200 -
