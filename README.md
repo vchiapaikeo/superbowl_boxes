@@ -51,3 +51,18 @@ Randomly generates superbowl boxes for you and your friends.
  91: Jay K 92: Jon 93: Ephraim 94: Jon 95: Nina 96: Jay Ly 97: Ryan 98: Carmen 99: Carmen 100: Ryan 
 
  127.0.0.1 - - [03/Feb/2018 18:03:58] "GET / HTTP/1.1" 200 -
+
+## Unit Test
+```
+[superbowl_boxes (master)]> pytest -v test/
+============================================================= test session starts ==============================================================
+platform darwin -- Python 3.6.5, pytest-5.3.5, py-1.8.1, pluggy-0.13.1 -- /Users/vchiapaikeo/my-development/superbowl_boxes/venv/bin/python3.6
+cachedir: .pytest_cache
+rootdir: /Users/vchiapaikeo/my-development/superbowl_boxes
+collected 2 items                                                                                                                              
+
+test/test_generate.py::TestGenerate::test_gen_results PASSED                                                                             [ 50%]
+test/test_generate.py::TestGenerate::test_get_random_names PASSED                                                                        [100%]
+
+============================================================== 2 passed in 0.16s ===============================================================
+```
