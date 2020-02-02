@@ -50,7 +50,7 @@ def format_results(results: List[str]) -> str:
 
 
 # TTL for 12 hours so it stays the same for duration of game
-@cache(size_limit=0, ttl=43200)
+# @cache(size_limit=0, ttl=43200)
 def get_random_names(friends: List[str], num_boxes: int) -> List[str]:
     shuffle(friends)
     num_friends = len(friends)
