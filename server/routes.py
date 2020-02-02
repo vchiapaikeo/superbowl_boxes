@@ -13,18 +13,15 @@ def api(names: List[str] = None, num_boxes: int = 100) -> str:
     if not names:
         names = [
             'Victor',
+            'Christian',
+            'Brian',
             'Ephraim',
             'Jay Ly',
-            'Nina',
-            'Christian',
-            'Ryan',
-            'Jon',
-            'Carmen',
-            'Jay K',
-            'Paulo',
             'Garrett',
-            'Brian',
-            'Tue',
+            'Carmen',
+            'Nina',
+            'Linda',
+            'Josephine',
         ]
     data = generate.gen_results(names, num_boxes).tolist()
     return jsonify(data)
