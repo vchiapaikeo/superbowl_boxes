@@ -3,6 +3,7 @@ import logging
 import numpy as np
 import sys
 
+from common.decorators import cache
 from random import randint, shuffle
 from typing import List
 
@@ -48,13 +49,9 @@ def format_results(results: List[str]) -> str:
     return formatted
 
 
+# TTL for 12 hours so it stays the same for duration of game
+@cache(size_limit=0, ttl=43200)
 def get_random_names(friends: List[str], num_boxes: int) -> List[str]:
-    # Did this earlier but that is wrong
-    # results = np.random.choice(
-    #     friends,
-    #     num_boxes,
-    #     p=([1 / num_friends] * num_friends))
-
     shuffle(friends)
     num_friends = len(friends)
     names_to_randomize = []
