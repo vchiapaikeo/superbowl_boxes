@@ -22,6 +22,7 @@ def api(names: List[str] = None, num_boxes: int = 100) -> str:
             'Nina',
             'Linda',
             'Josephine',
+            'Michelle',
         ]
     data = generate.gen_results(names, num_boxes).tolist()
     return jsonify(data)
